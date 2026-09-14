@@ -4,92 +4,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maleja Galeano | Artista</title>
+<title>Maleja Galeano | Artista plástica</title>
 
-<meta name="description" content="Maleja Galeano — Artista multidisciplinar e investigadora. Medellín, Colombia.">
+<meta name="description" content="Maleja Galeano — Artista plástica. Medellín, Colombia.">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#0a0a0a;
-    color:#eeeae4;
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.6;
+body {
+    background: #0a0a0a;
+    color: #eeeae4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-img{
-    max-width:100%;
-    display:block;
+img {
+    display: block;
+    max-width: 100%;
 }
 
 /* =========================
    NAVEGACIÓN
 ========================= */
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:24px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid rgba(255,255,255,.12);
-    background:rgba(10,10,10,.92);
-    backdrop-filter:blur(12px);
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 24px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    background: rgba(10,10,10,.94);
+    backdrop-filter: blur(12px);
 }
 
-.logo{
-    font-size:14px;
-    letter-spacing:4px;
-    font-weight:bold;
+.logo {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-nav{
-    display:flex;
-    gap:28px;
+nav {
+    display: flex;
+    gap: 28px;
 }
 
-nav a{
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#aaa;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#fff;
+nav a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
 }
 
 /* =========================
-   HERO
+   INICIO
 ========================= */
 
-.hero{
-    min-height:100vh;
-    padding:150px 7% 100px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    border-bottom:1px solid #292929;
+.hero {
+    min-height: 100vh;
+    padding: 150px 7% 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #292929;
     background:
         radial-gradient(
             circle at 75% 35%,
@@ -99,374 +95,406 @@ nav a:hover{
         );
 }
 
-.eyebrow{
-    margin-bottom:30px;
-    color:#777;
-    font-size:10px;
-    letter-spacing:5px;
-    text-transform:uppercase;
+.eyebrow {
+    margin-bottom: 30px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
-.hero h1{
-    font-family:Georgia,serif;
-    font-weight:400;
-    font-size:clamp(65px,13vw,170px);
-    line-height:.82;
-    letter-spacing:-7px;
+.hero h1 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(65px, 13vw, 170px);
+    line-height: .82;
+    letter-spacing: -7px;
 }
 
-.hero h1 span{
-    display:block;
-    font-style:italic;
+.hero h1 span {
+    display: block;
+    font-style: italic;
 }
 
-.hero-intro{
-    max-width:650px;
-    margin-top:55px;
-    color:#aaa6a0;
-    font-size:18px;
+.hero-intro {
+    max-width: 650px;
+    margin-top: 55px;
+    color: #aaa6a0;
+    font-size: 18px;
 }
 
 /* =========================
    SECCIONES
 ========================= */
 
-section{
-    padding:120px 7%;
-    border-bottom:1px solid #292929;
+section {
+    padding: 120px 7%;
+    border-bottom: 1px solid #292929;
 }
 
-.section-label{
-    margin-bottom:60px;
-    color:#666;
-    font-size:10px;
-    letter-spacing:4px;
-    text-transform:uppercase;
+.section-label {
+    margin-bottom: 60px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 /* =========================
    SOBRE MÍ
 ========================= */
 
-.about-grid{
-    display:grid;
-    grid-template-columns:330px 1fr;
-    gap:75px;
-    align-items:start;
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 330px) 1fr;
+    gap: 75px;
+    align-items: start;
 }
 
-.about-photo{
-    width:100%;
-    aspect-ratio:3/4;
-    object-fit:cover;
-    filter:grayscale(100%);
-    background:#181818;
+.about-photo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #181818;
 }
 
-.about-title{
-    margin-bottom:38px;
-    font-family:Georgia,serif;
-    font-size:clamp(38px,6vw,72px);
-    line-height:.95;
-    font-weight:400;
+.about-title {
+    margin-bottom: 38px;
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: .95;
+    font-weight: 400;
 }
 
-.about-text{
-    max-width:760px;
-    color:#aaa6a0;
-    font-size:17px;
+.about-text {
+    max-width: 820px;
+    color: #aaa6a0;
+    font-size: 17px;
 }
 
-.about-text p{
-    margin-bottom:24px;
+.about-text p {
+    margin-bottom: 24px;
 }
 
 /* =========================
    STATEMENT
 ========================= */
 
-.statement{
-    max-width:900px;
+.statement {
+    max-width: 1000px;
 }
 
-.statement-title{
-    margin-bottom:48px;
-    font-family:Georgia,serif;
-    font-size:clamp(40px,7vw,82px);
-    font-weight:400;
-    line-height:.95;
+.statement-title {
+    margin-bottom: 48px;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 7vw, 82px);
+    font-weight: 400;
+    line-height: .95;
 }
 
-.statement p{
-    margin-bottom:25px;
-    max-width:820px;
-    color:#aaa6a0;
-    font-size:18px;
+.statement p {
+    margin-bottom: 28px;
+    max-width: 900px;
+    color: #aaa6a0;
+    font-size: 18px;
 }
 
 /* =========================
    OBRAS
 ========================= */
 
-.works{
-    display:flex;
-    flex-direction:column;
-    gap:150px;
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
 }
 
-.work{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) 320px;
-    gap:60px;
-    align-items:start;
+.work {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 320px;
+    gap: 60px;
+    align-items: start;
 }
 
-.work:nth-child(even){
-    grid-template-columns:320px minmax(0,1fr);
+.work:nth-child(even) {
+    grid-template-columns: 320px minmax(0,1fr);
 }
 
-.work:nth-child(even) .gallery{
-    order:2;
+.work:nth-child(even) .gallery {
+    order: 2;
 }
 
-.work:nth-child(even) .work-info{
-    order:1;
+.work:nth-child(even) .work-info {
+    order: 1;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:8px;
+/*
+   LAS IMÁGENES CONSERVAN SU PROPORCIÓN.
+   NO SE RECORTAN.
+*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px;
+    align-items: start;
 }
 
-.gallery img{
-    width:100%;
-    height:100%;
-    min-height:300px;
-    object-fit:cover;
-    background:#151515;
+.gallery.single {
+    grid-template-columns: 1fr;
 }
 
-.gallery img.wide{
-    grid-column:span 2;
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: start;
+    background: #111;
 }
 
-.work-info{
-    position:sticky;
-    top:110px;
+.work-info {
+    position: sticky;
+    top: 110px;
 }
 
-.work-number{
-    margin-bottom:18px;
-    color:#555;
-    font-size:10px;
-    letter-spacing:4px;
+.work-number {
+    margin-bottom: 18px;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 4px;
 }
 
-.work-title{
-    margin-bottom:18px;
-    font-family:Georgia,serif;
-    font-size:38px;
-    font-weight:400;
-    line-height:1.05;
+.work-title {
+    margin-bottom: 18px;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.05;
 }
 
-.work-meta{
-    margin-bottom:30px;
-    color:#777;
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.work-meta {
+    margin-bottom: 30px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.work-description{
-    color:#aaa6a0;
-    font-size:15px;
+.work-description {
+    color: #aaa6a0;
+    font-size: 15px;
+}
+
+.work-description p {
+    margin-bottom: 22px;
+}
+
+.work-ficha {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #333;
+    color: #aaa6a0;
+    font-size: 14px;
+}
+
+.work-ficha p {
+    margin-bottom: 8px;
+}
+
+.work-ficha strong {
+    color: #eeeae4;
+    font-weight: normal;
 }
 
 /* =========================
    CONTACTO
 ========================= */
 
-.contact{
-    min-height:75vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+.contact {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.contact-title{
-    margin-bottom:45px;
-    font-family:Georgia,serif;
-    font-size:clamp(60px,10vw,120px);
-    font-weight:400;
-    line-height:.85;
+.contact-title {
+    margin-bottom: 45px;
+    font-family: Georgia, serif;
+    font-size: clamp(60px, 10vw, 120px);
+    font-weight: 400;
+    line-height: .85;
 }
 
-.contact-text{
-    max-width:570px;
-    margin-bottom:30px;
-    color:#aaa6a0;
+.contact-text {
+    max-width: 570px;
+    margin-bottom: 30px;
+    color: #aaa6a0;
 }
 
-.email{
-    display:inline-block;
-    width:max-content;
-    max-width:100%;
-    padding-bottom:8px;
-    border-bottom:1px solid #666;
-    font-family:Georgia,serif;
-    font-size:clamp(19px,3vw,31px);
+.email {
+    display: inline-block;
+    width: max-content;
+    max-width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #666;
+    font-family: Georgia, serif;
+    font-size: clamp(19px, 3vw, 31px);
+    word-break: break-word;
 }
 
-.phone{
-    margin-top:22px;
-    color:#aaa;
-    font-size:16px;
-    letter-spacing:2px;
+.phone {
+    margin-top: 22px;
+    color: #aaa;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
-.instagram{
-    margin-top:18px;
-    color:#aaa;
-    font-size:16px;
-    letter-spacing:1px;
+.instagram {
+    margin-top: 16px;
+    color: #aaa;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
-.instagram:hover,
-.phone:hover,
-.email:hover{
-    color:#fff;
+.instagram:hover {
+    color: #fff;
 }
 
 /* =========================
    FOOTER
 ========================= */
 
-footer{
-    padding:30px 7%;
-    display:flex;
-    justify-content:space-between;
-    color:#555;
-    font-size:9px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+footer {
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* =========================
    MÓVIL
 ========================= */
 
-@media(max-width:800px){
+@media(max-width:800px) {
 
-    header{
-        padding:18px 5%;
+    header {
+        padding: 18px 5%;
     }
 
-    .logo{
-        font-size:11px;
-        letter-spacing:3px;
+    .logo {
+        font-size: 11px;
+        letter-spacing: 3px;
     }
 
-    nav{
-        gap:12px;
+    nav {
+        gap: 12px;
     }
 
-    nav a{
-        font-size:7px;
-        letter-spacing:1px;
+    nav a {
+        font-size: 7px;
+        letter-spacing: 1px;
     }
 
-    .hero{
-        min-height:100vh;
-        padding:130px 6% 80px;
+    .hero {
+        min-height: 100vh;
+        padding: 130px 6% 80px;
     }
 
-    .hero h1{
-        font-size:clamp(58px,18vw,100px);
-        letter-spacing:-5px;
+    .hero h1 {
+        font-size: clamp(58px,18vw,100px);
+        letter-spacing: -5px;
     }
 
-    .hero-intro{
-        margin-top:45px;
-        font-size:16px;
+    .hero-intro {
+        margin-top: 45px;
+        font-size: 16px;
     }
 
-    section{
-        padding:85px 6%;
+    section {
+        padding: 85px 6%;
     }
 
-    .about-grid{
-        display:block;
+    .about-grid {
+        display: block;
     }
 
-    .about-photo{
-        max-width:330px;
-        margin-bottom:45px;
+    .about-photo {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 45px;
     }
 
-    .about-title{
-        font-size:42px;
+    .about-title {
+        font-size: 42px;
     }
 
-    .statement-title{
-        font-size:43px;
+    .statement-title {
+        font-size: 43px;
     }
 
-    .statement p{
-        font-size:16px;
+    .statement p {
+        font-size: 16px;
     }
 
-    .works{
-        gap:100px;
+    .works {
+        gap: 100px;
     }
 
     .work,
-    .work:nth-child(even){
-        display:flex;
-        flex-direction:column;
-        gap:30px;
+    .work:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
     }
 
-    .gallery{
-        width:100%;
-        order:1 !important;
+    .gallery {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        order: 1 !important;
     }
 
-    .work-info{
-        position:static;
-        order:2 !important;
+    .gallery img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
     }
 
-    .gallery img{
-        min-height:210px;
+    .work-info {
+        position: static;
+        order: 2 !important;
     }
 
-    .work-title{
-        font-size:32px;
+    .work-title {
+        font-size: 32px;
     }
 
-    .contact-title{
-        font-size:65px;
+    .work-description {
+        font-size: 15px;
     }
 
-    .email{
-        word-break:break-word;
+    .contact-title {
+        font-size: 65px;
     }
 
-    footer{
-        flex-direction:column;
-        gap:10px;
+    footer {
+        flex-direction: column;
+        gap: 10px;
     }
-
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -483,9 +511,7 @@ MALEJA GALEANO
 
 </header>
 
-
 <main>
-
 
 <!-- =========================
      INICIO
@@ -494,7 +520,7 @@ MALEJA GALEANO
 <section class="hero" id="inicio">
 
 <div class="eyebrow">
-Artista · Investigadora · Medellín
+Artista plástica · Medellín
 </div>
 
 <h1>
@@ -503,9 +529,7 @@ Maleja
 </h1>
 
 <p class="hero-intro">
-Artista multidisciplinar cuya práctica explora el cuerpo,
-el territorio, la memoria y las relaciones de poder que
-atraviesan nuestras formas de habitar, mirar y relacionarnos.
+Artista plástica
 </p>
 
 </section>
@@ -532,32 +556,13 @@ alt="Maleja Galeano"
 <div>
 
 <h2 class="about-title">
-Una práctica situada
-en el cuerpo.
+Artista plástica
 </h2>
 
 <div class="about-text">
 
 <p>
-Maleja Galeano es una artista multidisciplinar e investigadora
-en formación en Artes Plásticas de la Universidad de Antioquia.
-Su práctica se desarrolla desde Medellín y parte de una mirada
-crítica sobre el cuerpo, la memoria, el territorio y las
-estructuras de poder que atraviesan la experiencia cotidiana.
-</p>
-
-<p>
-A través de la instalación, el video, la fotografía,
-la intervención de objetos y otros lenguajes contemporáneos,
-construye dispositivos que cuestionan las formas en que
-miramos, habitamos y representamos nuestros cuerpos.
-</p>
-
-<p>
-Su trabajo aborda especialmente asuntos relacionados con
-la sexualidad, el erotismo, las relaciones de poder,
-la experiencia femenina, la ciudad y las economías que
-convierten el cuerpo en territorio de intercambio.
+artista multidisciplinaria y estudiante de Artes Plásticas en la Universidad de Antioquia. Nacida en Medellín, desarrolla una práctica principalmente instalativa y de exploración conceptual, en la que investigación y creación se articulan a través de distintos lenguajes y medios como el video, la pintura y el dibujo. A través de estas prácticas construye obras que exploran las relaciones entre cuerpo, mirada, deseo, memoria y las estructuras de poder que atraviesan la experiencia cotidiana.
 </p>
 
 </div>
@@ -582,43 +587,23 @@ convierten el cuerpo en territorio de intercambio.
 <div class="statement">
 
 <h2 class="statement-title">
-El cuerpo como territorio.
+S T A T E M E N T
 </h2>
 
 <p>
-Mi práctica artística parte del cuerpo como un territorio
-atravesado por relaciones de poder, memoria, deseo y control.
-Me interesa observar cómo los discursos sociales, culturales
-y económicos producen formas específicas de habitarlo,
-mirarlo y relacionarnos con él.
+Mi práctica artística se desarrolla desde una perspectiva crítica sobre las relaciones entre cuerpo, territorio, memoria y poder. Me interesa investigar cómo distintos discursos sociales, políticos, económicos y culturales producen formas de representación que condicionan la manera en que comprendemos a los sujetos, los espacios y las experiencias que configuran el mundo contemporáneo.
 </p>
 
 <p>
-Trabajo alrededor de la sexualidad, el erotismo,
-la experiencia femenina y las formas en que el cuerpo
-puede convertirse en objeto de consumo, vigilancia,
-representación o intercambio.
+A través de procesos de investigación, trabajo de campo e instalación, exploro fenómenos relacionados con la construcción de imaginarios colectivos, las economías simbólicas, las memorias urbanas y las formas en que determinados cuerpos, territorios y relatos adquieren visibilidad, mientras otros permanecen ocultos, marginalizados o fuera de las narrativas dominantes.
 </p>
 
 <p>
-Estas preguntas aparecen vinculadas a la ciudad de Medellín,
-sus transformaciones, sus imaginarios y las relaciones que
-se construyen entre territorio, turismo y deseo.
+Mi trabajo aborda temas como la sexualidad, la experiencia femenina, la ciudad, la cultura popular y los procesos comunitarios, entendiendo estos ámbitos como escenarios donde se manifiestan tensiones relacionadas con el deseo, el control, la identidad, la circulación de imágenes y la producción de sentido.
 </p>
 
 <p>
-La instalación, el video, la fotografía, los objetos y
-los dispositivos de observación hacen parte de una práctica
-que busca producir situaciones más que respuestas cerradas.
-Me interesa que quien observa también sea consciente de
-su propia posición dentro de aquello que está mirando.
-</p>
-
-<p>
-Desde allí, mi trabajo construye espacios de tensión entre
-lo íntimo y lo público, lo visible y lo oculto, el deseo
-y el control, preguntándose constantemente quién mira,
-quién es mirado y bajo qué condiciones.
+Desde el video, la instalación, la intervención de objetos y la experimentación con dispositivos de visualización, construyo experiencias que buscan cuestionar aquello que consideramos natural, evidente o visible. Me interesa generar situaciones que desplacen la mirada y permitan establecer otras formas de relación con el cuerpo, la memoria, el territorio y las estructuras que producen sus representaciones.
 </p>
 
 </div>
@@ -639,15 +624,18 @@ quién es mirado y bajo qué condiciones.
 <div class="works">
 
 
-<!-- 01 -->
+<!-- =========================
+     OBRA 01
+========================= -->
 
 <article class="work">
 
-<div class="gallery">
+<div class="gallery single">
 
 <img
 src="FA574899-C1E5-44A7-9DAF-F3B903DB09ED.PNG"
 alt="La delgada línea del erotismo"
+loading="lazy"
 >
 
 </div>
@@ -659,34 +647,60 @@ alt="La delgada línea del erotismo"
 </div>
 
 <h3 class="work-title">
-La delgada línea del erotismo
+LA DELGADA LÍNEA DEL EROTISMO
 </h3>
 
 <div class="work-meta">
 2019 · Instalación
 </div>
 
-<p class="work-description">
-Una exploración del erotismo y de las fronteras entre
-deseo, representación y mirada. La obra plantea el cuerpo
-como un territorio donde se cruzan intimidad, exposición
-y construcción cultural del deseo.
+<div class="work-description">
+
+<p>
+En este trabajo abordo el tabú, el voyeurismo, lo privado y lo cotidiano como puntos de partida para una exploración estética en torno al erotismo. La obra concentra su sentido en un elemento común e íntimo como la ropa interior, objeto que reúne diferentes manifestaciones asociadas al deseo, el placer y aquello que culturalmente reconocemos como erótico.
 </p>
+
+<p>
+A partir de los resultados de la investigación, invito a cinco mujeres, incluyéndome, a participar en la obra mediante la entrega de una prenda de ropa interior usada y una fotografía en la que cada una la llevara puesta. La elección de la prenda y de la imagen respondía a aquello con lo que cada participante se sentía más erotizada.
+</p>
+
+<p>
+En las fotografías aparece una coincidencia: la asociación entre menor cantidad de tela, determinadas poses y una mayor carga de sensualidad o erotismo. Este patrón permite establecer una relación con las formas contemporáneas de exposición del cuerpo en las redes sociales, donde la sexualidad se desplaza progresivamente del ámbito privado hacia el espacio público.
+</p>
+
+<p>
+La obra cuestiona así la delgada frontera entre erotismo y pornografía, y las formas en que el deseo es representado, consumido y legitimado socialmente bajo ideas como el amor, la libertad y la vida social.
+</p>
+
+</div>
+
+<div class="work-ficha">
+
+<p><strong>Título:</strong> La delgada línea del erotismo</p>
+<p><strong>Año:</strong> 2019</p>
+<p><strong>Medio:</strong> Instalación</p>
+<p><strong>Participantes:</strong> 5 mujeres, incluida la artista</p>
+<p><strong>Elementos:</strong> prendas de ropa interior usadas y fotografías</p>
+
+</div>
 
 </div>
 
 </article>
 
 
-<!-- 02 -->
+<!-- =========================
+     OBRA 02
+========================= -->
 
 <article class="work">
 
-<div class="gallery">
+<div class="gallery single">
 
 <img
 src="IMG_9167.jpg"
 alt="Reflejos de un tocador"
+loading="lazy"
 >
 
 </div>
@@ -698,33 +712,55 @@ alt="Reflejos de un tocador"
 </div>
 
 <h3 class="work-title">
-Reflejos de un tocador
+REFLEJOS DE UN TOCADOR
 </h3>
 
 <div class="work-meta">
 2019 · Serie
 </div>
 
-<p class="work-description">
-La mirada sobre el cuerpo aparece vinculada al espejo,
-la representación y las formas aprendidas de construir
-la propia imagen.
+<div class="work-description">
+
+<p>
+Pensar en los órganos genitales masculinos o femeninos nos remite generalmente al acto sexual, un arquetipo marcado a lo largo de la historia y construido cultural y socialmente. Al mismo tiempo, estos cuerpos han sido objetualizados, elogiados, violentados y temidos, dejando en segundo plano un cuerpo simbólico, atravesado por múltiples sentidos.
 </p>
+
+<p>
+Planteo entonces un lenguaje visual a partir de un juego doble de espejos, en el que las participantes son invitadas a autorretratarse y autodefinirse, permitiendo cuestionar las formas tradicionales de representar y mirar el cuerpo.
+</p>
+
+<p>
+El espejo introduce además al espectador en la experiencia: la invitación es a verse viendo, sin secretos, tabúes, restricciones ni prohibiciones, desde una conciencia del propio erotismo.
+</p>
+
+</div>
+
+<div class="work-ficha">
+
+<p><strong>Título:</strong> Reflejos de un tocador</p>
+<p><strong>Año:</strong> 2019</p>
+<p><strong>Tipo:</strong> Serie</p>
+<p><strong>Medio:</strong> Dibujo impreso en adhesivo transparente sobre espejo</p>
+
+</div>
 
 </div>
 
 </article>
 
 
-<!-- 03 -->
+<!-- =========================
+     OBRA 03
+========================= -->
 
 <article class="work">
 
-<div class="gallery">
+<div class="gallery single">
 
 <img
 src="5AC10DDA-8827-43EE-9ABF-AC5FB91611E8.PNG"
 alt="A medias"
+loading="lazy"
 >
 
 </div>
@@ -736,26 +772,58 @@ alt="A medias"
 </div>
 
 <h3 class="work-title">
-A medias
+A MEDIAS
 </h3>
 
 <div class="work-meta">
 2020 · Instalación
 </div>
 
-<p class="work-description">
-Una obra construida desde la fragmentación, la memoria
-y aquello que permanece incompleto. El espacio doméstico
-se convierte en un lugar para pensar las ausencias y las
-formas en que los recuerdos se reconstruyen.
+<div class="work-description">
+
+<p>
+El erotismo se alimenta de la búsqueda y la experiencia del placer de existir y de sentir. En este sentido, lo entiendo como una serie de procedimientos que vinculan actos, experiencias y elementos capaces de transformar nuestra relación con el cuerpo y con los sentidos. Una pulsión de vida que atraviesa las experiencias y nos permite resignificar aquello que habitamos.
 </p>
+
+<p>
+Desde esta perspectiva, propongo profundizar en una relación que va más allá de la carne y de la cotidianidad, pero que parte, precisamente, de elementos presentes en ella. Me interesa abrir la posibilidad de sentir e imaginar a partir de aquello que no representa ni evoca explícitamente la sexualidad, estableciendo asociaciones entre objetos cuya función original pertenece a otros ámbitos, pero que, con el tiempo, han adquirido nuevas significaciones.
+</p>
+
+<p>
+Las medias veladas surgieron, en parte, como respuesta a las normas morales relacionadas con la exposición del cuerpo femenino. Con el tiempo, este objeto cotidiano adquirió otras connotaciones y pasó a formar parte de los imaginarios asociados al erotismo y la sexualidad. Como una segunda piel, las medias pueden transmitir sensualidad, delicadeza, provocación o rebeldía, dependiendo de sus formas, texturas y transparencias. En ellas, la imaginación se convierte en un elemento fundamental para completar aquello que permanece oculto.
+</p>
+
+<p>
+Por otro lado, la manzana, asociada en la tradición religiosa con el fruto prohibido, se ha convertido en un símbolo del deseo, la tentación y el pecado original.
+</p>
+
+<p>
+En la instalación, las manzanas cuelgan de medias de malla que funcionan como redes. La obra propone así una asociación entre ambos elementos y plantea una pregunta abierta: ¿qué hace que una imagen, un objeto o una relación entre objetos pueda resultar tentadora o provocadora?
+</p>
+
+<p>
+La respuesta no está contenida únicamente en los objetos, sino también en la mirada y en el imaginario de quien los observa.
+</p>
+
+</div>
+
+<div class="work-ficha">
+
+<p><strong>Título:</strong> A medias</p>
+<p><strong>Año:</strong> 2020</p>
+<p><strong>Tipo:</strong> Instalación</p>
+<p><strong>Medio:</strong> Medias de malla y manzanas</p>
+
+</div>
 
 </div>
 
 </article>
 
 
-<!-- 04 -->
+<!-- =========================
+     OBRA 04
+========================= -->
 
 <article class="work">
 
@@ -764,21 +832,25 @@ formas en que los recuerdos se reconstruyen.
 <img
 src="D621096D-8A04-47A9-AC80-502F3BE56F95.PNG"
 alt="Retrato del despertar"
+loading="lazy"
 >
 
 <img
 src="IMG_2848.JPG"
-alt="Retrato del despertar"
+alt="Retrato del despertar — detalle"
+loading="lazy"
 >
 
 <img
 src="IMG_2864.HEIC"
-alt="Retrato del despertar"
+alt="Retrato del despertar — detalle"
+loading="lazy"
 >
 
 <img
 src="IMG_2867.JPG"
-alt="Retrato del despertar"
+alt="Retrato del despertar — detalle"
+loading="lazy"
 >
 
 </div>
@@ -790,27 +862,50 @@ alt="Retrato del despertar"
 </div>
 
 <h3 class="work-title">
-Retrato del despertar:
-una revolución sexual de la mujer
+RETRATO DEL DESPERTAR: UNA REVOLUCIÓN SEXUAL DE LA MUJER
 </h3>
 
 <div class="work-meta">
 2025 · Instalación
 </div>
 
-<p class="work-description">
-Una investigación sobre la educación sexual, la memoria
-femenina y los discursos que han regulado históricamente
-el cuerpo de las mujeres. La obra trabaja con documentos,
-testimonios y dispositivos de memoria.
+<div class="work-description">
+
+<p>
+La obra parte de la intervención de manuales y enciclopedias de educación sexual producidos entre las décadas de 1970 y 1980, particularmente del volumen El primer amor: la desfloración. Estos materiales, abordados desde perspectivas predominantemente médicas, psiquiátricas y masculinas, permiten rastrear algunas de las formas en que el discurso sobre la sexualidad femenina ha sido construido, normalizado y regulado socialmente.
 </p>
+
+<p>
+El término “desfloración” se convierte en un punto de partida para cuestionar las ideas históricas alrededor de la virginidad, el cuerpo femenino y los rituales que han asociado la sexualidad de las mujeres con la pureza, el honor y el matrimonio. La investigación se desplaza entonces del archivo al espacio íntimo mediante el transfer de fragmentos de estos textos sobre una sábana, evocando la carga simbólica de la noche nupcial y de aquellos dispositivos sociales que han vigilado y significado el cuerpo femenino.
+</p>
+
+<p>
+La sábana funciona como una superficie de memoria y de inscripción, donde el discurso normativo se encuentra con las experiencias de mujeres que han vivido esas formas de regulación. A este dispositivo se incorporan testimonios sonoros recogidos mediante entrevistas, cuyas voces confrontan y desbordan aquello que los discursos históricos han intentado definir sobre sus cuerpos y experiencias.
+</p>
+
+<p>
+La obra articula así archivo, intervención y desplazamiento para poner en tensión la relación entre los discursos que históricamente han producido una idea de la sexualidad femenina y las experiencias que existen más allá de ellos. El espacio íntimo se convierte en un lugar de confrontación entre memoria, poder, sexualidad y experiencia vivida.
+</p>
+
+</div>
+
+<div class="work-ficha">
+
+<p><strong>Título:</strong> Retrato del despertar: una revolución sexual de la mujer</p>
+<p><strong>Año:</strong> 2025</p>
+<p><strong>Tipo:</strong> Instalación</p>
+<p><strong>Medios:</strong> Intervención de archivo, transfer sobre sábana y testimonios sonoros.</p>
+
+</div>
 
 </div>
 
 </article>
 
 
-<!-- 05 -->
+<!-- =========================
+     OBRA 05
+========================= -->
 
 <article class="work">
 
@@ -819,11 +914,13 @@ testimonios y dispositivos de memoria.
 <img
 src="E5477FDE-D152-4EFB-833F-3297E9D8D164.PNG"
 alt="Vista panorámica"
+loading="lazy"
 >
 
 <img
 src="IMG_4471.HEIC"
-alt="Vista panorámica"
+alt="Vista panorámica — registro"
+loading="lazy"
 >
 
 </div>
@@ -835,26 +932,54 @@ alt="Vista panorámica"
 </div>
 
 <h3 class="work-title">
-Vista panorámica
+Vista PANORÁMICA
 </h3>
 
 <div class="work-meta">
 2026 · Video instalación
 </div>
 
-<p class="work-description">
-Una investigación sobre la mirada turística y las formas
-en que Medellín es observada, consumida y representada.
-La obra utiliza dispositivos de observación para cuestionar
-la posición de quien mira.
+<div class="work-description">
+
+<p>
+La obra propone una reflexión sobre el turismo sexual en Medellín y la forma en que ciertos cuerpos femeninos han sido incorporados al paisaje turístico contemporáneo de la ciudad. A través de dos recorridos audiovisuales realizados en zonas atravesadas por dinámicas de prostitución —Provenza y Parque Lleras, en El Poblado, y los sectores de Veracruz y El Raudal, en el centro—, la pieza evidencia cómo la mirada extranjera consume el territorio desde una lógica de observación, deseo y circulación.
 </p>
+
+<p>
+Los videos fueron registrados mediante gafas con cámara incorporada, simulando la mirada y el recorrido visual de un turista. El movimiento de la cabeza, la dirección de la observación y la forma de recorrer el espacio construyen una mirada que se distancia del tránsito cotidiano y se aproxima a una experiencia de contemplación y consumo visual del territorio.
+</p>
+
+<p>
+De esta manera, el espectador no solo observa la obra, sino que es situado dentro de una posición específica de mirada vinculada al turismo y a la manera en que determinados cuerpos y espacios son convertidos en experiencias exóticas.
+</p>
+
+<p>
+Posteriormente, el material audiovisual es proyectado sobre pantallas intervenidas que, a simple vista, aparecen como superficies blancas. La imagen solo puede percibirse mediante gafas con un filtro especial, convirtiendo la visión en una experiencia condicionada y mediada por un dispositivo. Este mecanismo establece una relación entre mirada, acceso y deseo, situando al espectador dentro de una lógica de observación similar a la que la obra cuestiona.
+</p>
+
+<p>
+La pieza establece un contraste entre ambos sectores de la ciudad. Mientras en El Poblado aparece una imagen hipersexualizada y producida del cuerpo femenino, en el centro emergen cuerpos atravesados por otras condiciones materiales y económicas. Más que documentar la prostitución, la obra busca evidenciar cómo estas dinámicas han sido incorporadas al paisaje urbano y turístico de Medellín.
+</p>
+
+</div>
+
+<div class="work-ficha">
+
+<p><strong>Título:</strong> vista panorámica</p>
+<p><strong>Año:</strong> 2026</p>
+<p><strong>Tipo:</strong> Video instalación</p>
+<p><strong>Medios:</strong> Video, gafas con cámara incorporada, pantallas intervenidas y gafas con filtro especial.</p>
+
+</div>
 
 </div>
 
 </article>
 
 
-<!-- 06 -->
+<!-- =========================
+     OBRA 06
+========================= -->
 
 <article class="work">
 
@@ -863,46 +988,55 @@ la posición de quien mira.
 <img
 src="DE923E0D-B79F-4E1D-BAFD-BC754174F31B.PNG"
 alt="Economía del deseo"
+loading="lazy"
 >
 
 <img
 src="4B134F1C-31B1-49C2-A24D-4888AF0B1C41.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — instalación"
+loading="lazy"
 >
 
 <img
 src="IMG_9215.jpeg"
-alt="Economía del deseo"
+alt="Economía del deseo — mapa"
+loading="lazy"
 >
 
 <img
 src="Untitled%20design%20-%201.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — billete"
+loading="lazy"
 >
 
 <img
 src="Untitled%20design%20-%202.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — billete"
+loading="lazy"
 >
 
 <img
 src="Untitled%20design%20-%203.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — billete"
+loading="lazy"
 >
 
 <img
 src="Untitled%20design%20-%204.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — billete"
+loading="lazy"
 >
 
 <img
 src="Untitled%20design%20-%205.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — billete"
+loading="lazy"
 >
 
 <img
 src="Untitled%20design%20-%206.PNG"
-alt="Economía del deseo"
+alt="Economía del deseo — billete"
+loading="lazy"
 >
 
 </div>
@@ -914,34 +1048,63 @@ alt="Economía del deseo"
 </div>
 
 <h3 class="work-title">
-Economía del deseo
+ECONOMÍA DEL DESEO
 </h3>
 
 <div class="work-meta">
 2026 · Instalación
 </div>
 
-<p class="work-description">
-La obra establece relaciones entre deseo, territorio,
-turismo y valor económico. A partir de mapas, monedas
-y conversiones monetarias, plantea el cuerpo como un
-territorio atravesado por distintas formas de intercambio.
+<div class="work-description">
+
+<p>
+La propuesta plantea una reflexión sobre la economía del deseo y las formas en que el cuerpo femenino entra en dinámicas contemporáneas de intercambio, circulación y conversión monetaria dentro del contexto del turismo sexual en Medellín. A partir de distintos dispositivos visuales, gráficos y digitales, la obra explora cómo determinados cuerpos son traducidos a valores económicos, integrándose a lógicas de consumo global y sostenimiento material.
 </p>
+
+<p>
+La instalación está compuesta por varios elementos. El primero es un mapa de gran formato construido a partir de lenguajes visuales y terminologías propias de la economía y las finanzas. En él se establece una relación entre el valor promedio de determinados servicios sexuales ofrecidos en Medellín y su equivalencia en distintas monedas del mundo. Más que una traducción monetaria literal, el mapa propone una lectura crítica sobre la manera en que el cuerpo es incorporado a sistemas de cambio, circulación y supervivencia económica.
+</p>
+
+<p>
+El segundo elemento consiste en una serie de intervenciones sobre billetes de 20, 50 y 100 dólares, en los que se reemplazan símbolos oficiales por imágenes, datos y lenguajes vinculados al turismo sexual contemporáneo. Sellos con logotipos de plataformas utilizadas para contratar estos servicios, números de serie sustituidos por estadísticas relacionadas con vuelos, ingreso de extranjeros, investigaciones hoteleras y dinámicas de explotación sexual, así como edificios emblemáticos reemplazados por hoteles asociados a estas economías, alteran el significado original de los billetes. Los textos también son intervenidos mediante frases tomadas del lenguaje turístico y financiero, estableciendo relaciones entre deseo, consumo y capital.
+</p>
+
+<p>
+La propuesta incorpora además una plataforma digital interactiva inspirada en páginas de conversión de moneda. En lugar de convertir divisas tradicionales, el espectador encuentra distintos servicios sexuales y su equivalencia en monedas de múltiples países, confrontando directamente las relaciones entre cuerpo, economía y circulación global.
+</p>
+
+<p>
+Conceptualmente, la obra dialoga con las ideas de Karl Marx en El capital, particularmente con la transformación del cuerpo y la fuerza de trabajo en mercancía dentro de sistemas económicos de intercambio. Asimismo, se relaciona con los planteamientos de Michel Foucault sobre los mecanismos de control y administración de los cuerpos, entendiendo la sexualidad como un territorio atravesado por relaciones de poder, regulación y producción.
+</p>
+
+</div>
+
+<div class="work-ficha">
+
+<p><strong>Título:</strong> Economía del deseo</p>
+<p><strong>Tipo:</strong> Instalación</p>
+<p><strong>Medios:</strong> Mapa de gran formato, intervención de billetes, plataforma digital interactiva y dispositivos gráficos.</p>
+<p><strong>Año:</strong> 2026</p>
+
+</div>
 
 </div>
 
 </article>
 
 
-<!-- 07 -->
+<!-- =========================
+     OBRA 07
+========================= -->
 
 <article class="work">
 
-<div class="gallery">
+<div class="gallery single">
 
 <img
 src="7AD10838-1BB8-4134-B0A9-C8DEA083EF68.jpg"
 alt="Transpermanecer"
+loading="lazy"
 >
 
 </div>
@@ -953,24 +1116,49 @@ alt="Transpermanecer"
 </div>
 
 <h3 class="work-title">
-Transpermanecer
+TRANSPERMANECER
 </h3>
 
 <div class="work-meta">
 2026 · Video instalación
 </div>
 
-<p class="work-description">
-Una investigación sobre permanencia, transformación
-y cuerpo. La imagen en movimiento funciona como un
-espacio de tránsito entre aquello que permanece y aquello
-que cambia.
+<div class="work-description">
+
+<p>
+La obra parte de una reflexión sobre la ciudad como un territorio atravesado por relaciones de poder, donde el espacio público, aunque se presenta como común y accesible, no garantiza las mismas condiciones de permanencia para todos los cuerpos.
+</p>
+
+<p>
+A partir de las experiencias de mujeres trabajadoras sexuales, quienes son obligadas a circular o desplazarse de determinados lugares, la obra se pregunta quién puede detenerse, quién puede permanecer y quién tiene el poder de determinar las condiciones de esa permanencia.
+</p>
+
+<p>
+La palabra circular adquiere así un sentido político: no solo refiere al desplazamiento por la ciudad, sino también a una condición impuesta sobre determinados cuerpos para continuar ocupando un territorio.
+</p>
+
+<p>
+En este sentido, el desplazamiento obligado no significa necesariamente dejar de permanecer. El cuerpo se mueve porque se le exige circular, pero ese movimiento no supone una ruptura definitiva con el lugar que ocupa. La circulación se convierte en un desplazamiento temporal: el cuerpo se mueve para volver a permanecer.
+</p>
+
+<p>
+La obra propone una reflexión sobre la vigilancia y las formas en que los cuerpos son identificados, regulados y desplazados dentro del espacio público. Transpermanecer plantea así una ciudad donde permanecer también puede ser una forma de resistencia, y donde moverse no necesariamente significa dejar de ocupar un lugar.
 </p>
 
 </div>
 
-</article>
+<div class="work-ficha">
 
+<p><strong>Título:</strong> Transpermanecer</p>
+<p><strong>Año:</strong> 2026</p>
+<p><strong>Tipo:</strong> Video instalación</p>
+<p><strong>Medio:</strong> Video</p>
+
+</div>
+
+</div>
+
+</article>
 
 </div>
 
@@ -992,35 +1180,30 @@ Hablemos.
 </h2>
 
 <p class="contact-text">
-Para exposiciones, proyectos, colaboraciones,
-investigación o información sobre mi práctica artística:
+Para exposiciones, proyectos, colaboraciones, investigación o información sobre mi práctica artística:
 </p>
 
 <a
 class="email"
-href="mailto:Malejandra.galeano@gmail.com"
+href="mailto:Malejandra.galeano@udea.edu.co"
 >
-Malejandra.galeano@gmail.com
+Malejandra.galeano@udea.edu.co
 </a>
 
-<a
-class="phone"
-href="tel:+573105636499"
->
-310 563 6499
-</a>
+<p class="phone">
+3105636499
+</p>
 
 <a
 class="instagram"
-href="https://www.instagram.com/meleja.galeano/"
+href="https://www.instagram.com/maleja.galeano/"
 target="_blank"
 rel="noopener"
 >
-@meleja.galeano · Instagram
+Instagram · @maleja.galeano
 </a>
 
 </section>
-
 
 </main>
 
@@ -1036,7 +1219,6 @@ Medellín · Colombia
 </span>
 
 </footer>
-
 
 </body>
 </html>
