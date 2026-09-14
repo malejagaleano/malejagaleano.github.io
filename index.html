@@ -239,19 +239,16 @@ section{
     gap:8px;
 }
 
-.gallery-placeholder{
+.gallery img{
+    width:100%;
+    height:100%;
     min-height:300px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:30px;
+    object-fit:cover;
     background:#151515;
-    border:1px solid #272727;
-    color:#555;
-    text-align:center;
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+}
+
+.gallery img.wide{
+    grid-column:span 2;
 }
 
 .work-info{
@@ -327,6 +324,19 @@ section{
     color:#aaa;
     font-size:16px;
     letter-spacing:2px;
+}
+
+.instagram{
+    margin-top:18px;
+    color:#aaa;
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+.instagram:hover,
+.phone:hover,
+.email:hover{
+    color:#fff;
 }
 
 /* =========================
@@ -428,7 +438,7 @@ footer{
         order:2 !important;
     }
 
-    .gallery-placeholder{
+    .gallery img{
         min-height:210px;
     }
 
@@ -513,9 +523,11 @@ atraviesan nuestras formas de habitar, mirar y relacionarnos.
 
 <div class="about-grid">
 
-<div class="about-photo gallery-placeholder">
-Fotografía de Maleja Galeano
-</div>
+<img
+class="about-photo"
+src="_AAA1874.JPEG"
+alt="Maleja Galeano"
+>
 
 <div>
 
@@ -633,13 +645,10 @@ quién es mirado y bajo qué condiciones.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
-
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="FA574899-C1E5-44A7-9DAF-F3B903DB09ED.PNG"
+alt="La delgada línea del erotismo"
+>
 
 </div>
 
@@ -675,13 +684,10 @@ y construcción cultural del deseo.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
-
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="IMG_9167.jpg"
+alt="Reflejos de un tocador"
+>
 
 </div>
 
@@ -716,13 +722,10 @@ la propia imagen.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
-
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="5AC10DDA-8827-43EE-9ABF-AC5FB91611E8.PNG"
+alt="A medias"
+>
 
 </div>
 
@@ -758,13 +761,25 @@ formas en que los recuerdos se reconstruyen.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="D621096D-8A04-47A9-AC80-502F3BE56F95.PNG"
+alt="Retrato del despertar"
+>
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="IMG_2848.JPG"
+alt="Retrato del despertar"
+>
+
+<img
+src="IMG_2864.HEIC"
+alt="Retrato del despertar"
+>
+
+<img
+src="IMG_2867.JPG"
+alt="Retrato del despertar"
+>
 
 </div>
 
@@ -801,13 +816,15 @@ testimonios y dispositivos de memoria.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="E5477FDE-D152-4EFB-833F-3297E9D8D164.PNG"
+alt="Vista panorámica"
+>
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="IMG_4471.HEIC"
+alt="Vista panorámica"
+>
 
 </div>
 
@@ -843,21 +860,50 @@ la posición de quien mira.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de Economía del deseo
-</div>
+<img
+src="DE923E0D-B79F-4E1D-BAFD-BC754174F31B.PNG"
+alt="Economía del deseo"
+>
 
-<div class="gallery-placeholder">
-Fotografías de Economía del deseo
-</div>
+<img
+src="4B134F1C-31B1-49C2-A24D-4888AF0B1C41.PNG"
+alt="Economía del deseo"
+>
 
-<div class="gallery-placeholder">
-Material de la obra
-</div>
+<img
+src="IMG_9215.jpeg"
+alt="Economía del deseo"
+>
 
-<div class="gallery-placeholder">
-Material de la obra
-</div>
+<img
+src="Untitled%20design%20-%201.PNG"
+alt="Economía del deseo"
+>
+
+<img
+src="Untitled%20design%20-%202.PNG"
+alt="Economía del deseo"
+>
+
+<img
+src="Untitled%20design%20-%203.PNG"
+alt="Economía del deseo"
+>
+
+<img
+src="Untitled%20design%20-%204.PNG"
+alt="Economía del deseo"
+>
+
+<img
+src="Untitled%20design%20-%205.PNG"
+alt="Economía del deseo"
+>
+
+<img
+src="Untitled%20design%20-%206.PNG"
+alt="Economía del deseo"
+>
 
 </div>
 
@@ -893,13 +939,10 @@ territorio atravesado por distintas formas de intercambio.
 
 <div class="gallery">
 
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
-
-<div class="gallery-placeholder">
-Fotografías de la obra
-</div>
+<img
+src="7AD10838-1BB8-4134-B0A9-C8DEA083EF68.jpg"
+alt="Transpermanecer"
+>
 
 </div>
 
@@ -955,14 +998,26 @@ investigación o información sobre mi práctica artística:
 
 <a
 class="email"
-href="mailto:Malejandra.galeano@udea.edu.co"
+href="mailto:Malejandra.galeano@gmail.com"
 >
-Malejandra.galeano@udea.edu.co
+Malejandra.galeano@gmail.com
 </a>
 
-<p class="phone">
+<a
+class="phone"
+href="tel:+573105636499"
+>
 310 563 6499
-</p>
+</a>
+
+<a
+class="instagram"
+href="https://www.instagram.com/meleja.galeano/"
+target="_blank"
+rel="noopener"
+>
+@meleja.galeano · Instagram
+</a>
 
 </section>
 
