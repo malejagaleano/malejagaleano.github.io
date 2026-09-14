@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -75,6 +76,10 @@ nav a {
     color: #aaa;
 }
 
+nav a:hover {
+    color: #fff;
+}
+
 /* =========================
    INICIO
 ========================= */
@@ -86,6 +91,7 @@ nav a {
     flex-direction: column;
     justify-content: center;
     border-bottom: 1px solid #292929;
+
     background:
         radial-gradient(
             circle at 75% 35%,
@@ -228,10 +234,9 @@ section {
     order: 1;
 }
 
-/*
-   LAS IMÁGENES CONSERVAN SU PROPORCIÓN.
-   NO SE RECORTAN.
-*/
+/* =========================
+   GALERÍAS
+========================= */
 
 .gallery {
     display: grid;
@@ -254,16 +259,13 @@ section {
     background: #111;
 }
 
+/* =========================
+   INFORMACIÓN DE OBRA
+========================= */
+
 .work-info {
     position: sticky;
     top: 110px;
-}
-
-.work-number {
-    margin-bottom: 18px;
-    color: #555;
-    font-size: 10px;
-    letter-spacing: 4px;
 }
 
 .work-title {
@@ -542,14 +544,14 @@ Artista plástica
 <section id="sobre-mi">
 
 <div class="section-label">
-01 / Sobre mí
+Sobre mí
 </div>
 
 <div class="about-grid">
 
 <img
 class="about-photo"
-src="_AAA1874.JPEG"
+src="IMG_9243.jpeg"
 alt="Maleja Galeano"
 >
 
@@ -581,7 +583,7 @@ artista multidisciplinaria y estudiante de Artes Plásticas en la Universidad de
 <section id="statement">
 
 <div class="section-label">
-02 / Statement
+Statement
 </div>
 
 <div class="statement">
@@ -618,14 +620,14 @@ Desde el video, la instalación, la intervención de objetos y la experimentaci�
 <section id="obras">
 
 <div class="section-label">
-03 / Obras
+Obras
 </div>
 
 <div class="works">
 
 
 <!-- =========================
-     OBRA 01
+     LA DELGADA LÍNEA DEL EROTISMO
 ========================= -->
 
 <article class="work">
@@ -633,7 +635,7 @@ Desde el video, la instalación, la intervención de objetos y la experimentaci�
 <div class="gallery single">
 
 <img
-src="FA574899-C1E5-44A7-9DAF-F3B903DB09ED.PNG"
+src="5AC10DDA-8827-43EE-9ABF-AC5FB91611E8.PNG"
 alt="La delgada línea del erotismo"
 loading="lazy"
 >
@@ -641,10 +643,6 @@ loading="lazy"
 </div>
 
 <div class="work-info">
-
-<div class="work-number">
-01
-</div>
 
 <h3 class="work-title">
 LA DELGADA LÍNEA DEL EROTISMO
@@ -690,7 +688,7 @@ La obra cuestiona así la delgada frontera entre erotismo y pornografía, y las 
 
 
 <!-- =========================
-     OBRA 02
+     REFLEJOS DE UN TOCADOR
 ========================= -->
 
 <article class="work">
@@ -706,10 +704,6 @@ loading="lazy"
 </div>
 
 <div class="work-info">
-
-<div class="work-number">
-02
-</div>
 
 <h3 class="work-title">
 REFLEJOS DE UN TOCADOR
@@ -750,7 +744,7 @@ El espejo introduce además al espectador en la experiencia: la invitación es a
 
 
 <!-- =========================
-     OBRA 03
+     A MEDIAS
 ========================= -->
 
 <article class="work">
@@ -758,7 +752,7 @@ El espejo introduce además al espectador en la experiencia: la invitación es a
 <div class="gallery single">
 
 <img
-src="5AC10DDA-8827-43EE-9ABF-AC5FB91611E8.PNG"
+src="FA574899-C1E5-44A7-9DAF-F3B903DB09ED.PNG"
 alt="A medias"
 loading="lazy"
 >
@@ -766,10 +760,6 @@ loading="lazy"
 </div>
 
 <div class="work-info">
-
-<div class="work-number">
-03
-</div>
 
 <h3 class="work-title">
 A MEDIAS
@@ -822,7 +812,7 @@ La respuesta no está contenida únicamente en los objetos, sino también en la 
 
 
 <!-- =========================
-     OBRA 04
+     RETRATO DEL DESPERTAR
 ========================= -->
 
 <article class="work">
@@ -856,10 +846,6 @@ loading="lazy"
 </div>
 
 <div class="work-info">
-
-<div class="work-number">
-04
-</div>
 
 <h3 class="work-title">
 RETRATO DEL DESPERTAR: UNA REVOLUCIÓN SEXUAL DE LA MUJER
@@ -904,7 +890,7 @@ La obra articula así archivo, intervención y desplazamiento para poner en tens
 
 
 <!-- =========================
-     OBRA 05
+     VISTA PANORÁMICA
 ========================= -->
 
 <article class="work">
@@ -926,10 +912,6 @@ loading="lazy"
 </div>
 
 <div class="work-info">
-
-<div class="work-number">
-05
-</div>
 
 <h3 class="work-title">
 Vista PANORÁMICA
@@ -978,7 +960,7 @@ La pieza establece un contraste entre ambos sectores de la ciudad. Mientras en E
 
 
 <!-- =========================
-     OBRA 06
+     ECONOMÍA DEL DESEO
 ========================= -->
 
 <article class="work">
@@ -1043,10 +1025,6 @@ loading="lazy"
 
 <div class="work-info">
 
-<div class="work-number">
-06
-</div>
-
 <h3 class="work-title">
 ECONOMÍA DEL DESEO
 </h3>
@@ -1094,7 +1072,7 @@ Conceptualmente, la obra dialoga con las ideas de Karl Marx en El capital, parti
 
 
 <!-- =========================
-     OBRA 07
+     TRANSPERMANECER
 ========================= -->
 
 <article class="work">
@@ -1110,10 +1088,6 @@ loading="lazy"
 </div>
 
 <div class="work-info">
-
-<div class="work-number">
-07
-</div>
 
 <h3 class="work-title">
 TRANSPERMANECER
@@ -1172,7 +1146,7 @@ La obra propone una reflexión sobre la vigilancia y las formas en que los cuerp
 <section id="contacto" class="contact">
 
 <div class="section-label">
-04 / Contacto
+Contacto
 </div>
 
 <h2 class="contact-title">
