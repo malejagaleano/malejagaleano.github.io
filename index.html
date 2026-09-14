@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maleja Galeano — Artista</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #f1eee8;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11,11,11,.94);
+      border-bottom: 1px solid #333;
+      padding: 25px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 17px;
+      letter-spacing: 4px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: #f1eee8;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      min-height: 88vh;
+      padding: 10vh 6%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        linear-gradient(90deg, #0b0b0b 0%, #0b0b0b 48%, rgba(11,11,11,.2)),
+        #151515;
+    }
+
+    .eyebrow {
+      color: #999;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(65px, 12vw, 150px);
+      line-height: .88;
+      letter-spacing: -5px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-style: italic;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin-top: 45px;
+      font-size: 19px;
+      color: #c8c5bf;
+    }
+
+    section {
+      padding: 110px 6%;
+      border-top: 1px solid #333;
+    }
+
+    .section-number {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 55px;
+    }
+
+    .about {
+      max-width: 850px;
+      font-family: Georgia, serif;
+      font-size: clamp(25px, 4vw, 45px);
+      line-height: 1.15;
+    }
+
+    .statement {
+      max-width: 850px;
+      font-size: 18px;
+      color: #c8c5bf;
+    }
+
+    .statement p {
+      margin-bottom: 25px;
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 65px 35px;
+    }
+
+    .work-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #181818;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      overflow: hidden;
+    }
+
+    .work-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .work-number {
+      color: #777;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .work h3 {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: 29px;
+      line-height: 1.1;
+    }
+
+    .work-meta {
+      color: #999;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .work-detail {
+      margin-top: 25px;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .work-detail strong {
+      color: #eee;
+      font-weight: normal;
+    }
+
+    .contact {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(55px, 9vw, 115px);
+      line-height: .9;
+      font-weight: 400;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 40px;
+      color: #f1eee8;
+      text-decoration: none;
+      border-bottom: 1px solid #777;
+      padding-bottom: 5px;
+      width: fit-content;
+    }
+
+    footer {
+      border-top: 1px solid #333;
+      padding: 30px 6%;
+      display: flex;
+      justify-content: space-between;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 20px 5%;
+      }
+
+      .logo {
+        font-size: 13px;
+        letter-spacing: 3px;
+      }
+
+      nav a {
+        margin-left: 12px;
+        font-size: 9px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .intro {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 80px 5%;
+      }
+
+      .works {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .work h3 {
+        font-size: 26px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<header>
+  <div class="logo">MALEJA GALEANO</div>
+
+  <nav>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#statement">Statement</a>
+    <a href="#obra">Obra</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+
+<!-- INICIO -->
+
+<section class="hero">
+
+  <div class="eyebrow">
+    Artista · Investigadora
+  </div>
+
+  <h1>
+    Maleja
+    <span>Galeano</span>
+  </h1>
+
+  <div class="intro">
+    Una práctica artística atravesada por el cuerpo,
+    la mirada, el deseo, la memoria y las estructuras
+    de poder que atraviesan la experiencia cotidiana.
+  </div>
+
+</section>
+
+
+<!-- SOBRE MÍ -->
+
+<section id="sobre">
+
+  <div class="section-number">
+    01 — Sobre mí
+  </div>
+
+  <div class="about">
+    Maleja Galeano es artista multidisciplinaria y estudiante
+    de Artes Plásticas en la Universidad de Antioquia.
+    Nacida en Medellín, desarrolla una práctica principalmente
+    instalativa y de exploración conceptual, en la que
+    investigación y creación se articulan a través de distintos
+    lenguajes y medios como el video, la pintura y el dibujo.
+    A través de estas prácticas construye obras que exploran
+    las relaciones entre cuerpo, mirada, deseo, memoria y las
+    estructuras de poder que atraviesan la experiencia cotidiana.
+  </div>
+
+</section>
+
+
+<!-- STATEMENT -->
+
+<section id="statement">
+
+  <div class="section-number">
+    02 — Statement
+  </div>
+
+  <div class="statement">
+
+    <p>
+      Mi práctica artística se desarrolla desde una perspectiva
+      crítica sobre las relaciones entre cuerpo, territorio,
+      memoria y poder. Me interesa investigar cómo distintos
+      discursos sociales, políticos, económicos y culturales
+      producen formas de representación que condicionan la
+      manera en que comprendemos a los sujetos, los espacios
+      y las experiencias que configuran el mundo contemporáneo.
+    </p>
+
+    <p>
+      A través de procesos de investigación, trabajo de campo
+      e instalación, exploro fenómenos relacionados con la
+      construcción de imaginarios colectivos, las economías
+      simbólicas, las memorias urbanas y las formas en que
+      determinados cuerpos, territorios y relatos adquieren
+      visibilidad, mientras otros permanecen ocultos,
+      marginalizados o fuera de las narrativas dominantes.
+    </p>
+
+    <p>
+      Mi trabajo aborda temas como la sexualidad, la experiencia
+      femenina, la ciudad, la cultura popular y los procesos
+      comunitarios, entendiendo estos ámbitos como escenarios
+      donde se manifiestan tensiones relacionadas con el deseo,
+      el control, la identidad, la circulación de imágenes y la
+      producción de sentido.
+    </p>
+
+    <p>
+      Desde el video, la instalación, la intervención de objetos
+      y la experimentación con dispositivos de visualización,
+      construyo experiencias que buscan cuestionar aquello que
+      consideramos natural, evidente o visible. Me interesa
+      generar situaciones que desplacen la mirada y permitan
+      establecer otras formas de relación con el cuerpo,
+      la memoria, el territorio y las estructuras que producen
+      sus representaciones.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- OBRAS -->
+
+<section id="obra">
+
+  <div class="section-number">
+    03 — Obras
+  </div>
+
+
+  <div class="works">
+
+
+    <!-- OBRA 01 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — LA DELGADA LÍNEA DEL EROTISMO
+      </div>
+
+      <div class="work-number">01</div>
+
+      <h3>La delgada línea del erotismo</h3>
+
+      <div class="work-meta">
+        2019 · Instalación
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          En este trabajo abordo el tabú, el voyeurismo, lo privado
+          y lo cotidiano como puntos de partida para una exploración
+          estética en torno al erotismo. La obra concentra su sentido
+          en un elemento común e íntimo como la ropa interior, objeto
+          que reúne diferentes manifestaciones asociadas al deseo,
+          el placer y aquello que culturalmente reconocemos como erótico.
+        </p>
+
+        <br>
+
+        <p>
+          A partir de los resultados de la investigación, invito a
+          cinco mujeres, incluyéndome, a participar en la obra mediante
+          la entrega de una prenda de ropa interior usada y una fotografía
+          en la que cada una la llevara puesta. La elección de la prenda
+          y de la imagen respondía a aquello con lo que cada participante
+          se sentía más erotizada.
+        </p>
+
+        <br>
+
+        <p>
+          En las fotografías aparece una coincidencia: la asociación
+          entre menor cantidad de tela, determinadas poses y una mayor
+          carga de sensualidad o erotismo. Este patrón permite establecer
+          una relación con las formas contemporáneas de exposición del
+          cuerpo en las redes sociales, donde la sexualidad se desplaza
+          progresivamente del ámbito privado hacia el espacio público.
+        </p>
+
+        <br>
+
+        <p>
+          La obra cuestiona así la delgada frontera entre erotismo y
+          pornografía, y las formas en que el deseo es representado,
+          consumido y legitimado socialmente bajo ideas como el amor,
+          la libertad y la vida social.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medio:</strong> Prendas de ropa interior usadas y fotografías.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 02 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — REFLEJOS DE UN TOCADOR
+      </div>
+
+      <div class="work-number">02</div>
+
+      <h3>Reflejos de un tocador</h3>
+
+      <div class="work-meta">
+        2019 · Serie
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          Pensar en los órganos genitales masculinos o femeninos
+          nos remite generalmente al acto sexual, un arquetipo
+          marcado a lo largo de la historia y construido cultural
+          y socialmente. Al mismo tiempo, estos cuerpos han sido
+          objetualizados, elogiados, violentados y temidos, dejando
+          en segundo plano un cuerpo simbólico, atravesado por
+          múltiples sentidos.
+        </p>
+
+        <br>
+
+        <p>
+          Planteo entonces un lenguaje visual a partir de un juego
+          doble de espejos, en el que las participantes son invitadas
+          a autorretratarse y autodefinirse, permitiendo cuestionar
+          las formas tradicionales de representar y mirar el cuerpo.
+        </p>
+
+        <br>
+
+        <p>
+          El espejo introduce además al espectador en la experiencia:
+          la invitación es a verse viendo, sin secretos, tabúes,
+          restricciones ni prohibiciones, desde una conciencia
+          del propio erotismo.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medio:</strong> Dibujo impreso en adhesivo transparente
+          sobre espejo.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 03 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — A MEDIAS
+      </div>
+
+      <div class="work-number">03</div>
+
+      <h3>A medias</h3>
+
+      <div class="work-meta">
+        2020 · Instalación
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          El erotismo se alimenta de la búsqueda y la experiencia
+          del placer de existir y de sentir. En este sentido, lo
+          entiendo como una serie de procedimientos que vinculan
+          actos, experiencias y elementos capaces de transformar
+          nuestra relación con el cuerpo y con los sentidos.
+        </p>
+
+        <br>
+
+        <p>
+          Desde esta perspectiva, propongo profundizar en una relación
+          que va más allá de la carne y de la cotidianidad, pero que
+          parte, precisamente, de elementos presentes en ella. Me
+          interesa abrir la posibilidad de sentir e imaginar a partir
+          de aquello que no representa ni evoca explícitamente la
+          sexualidad.
+        </p>
+
+        <br>
+
+        <p>
+          Las medias veladas surgieron, en parte, como respuesta a
+          las normas morales relacionadas con la exposición del cuerpo
+          femenino. Con el tiempo, este objeto cotidiano adquirió otras
+          connotaciones y pasó a formar parte de los imaginarios
+          asociados al erotismo y la sexualidad.
+        </p>
+
+        <br>
+
+        <p>
+          Por otro lado, la manzana, asociada en la tradición religiosa
+          con el fruto prohibido, se ha convertido en un símbolo del
+          deseo, la tentación y el pecado original.
+        </p>
+
+        <br>
+
+        <p>
+          En la instalación, las manzanas cuelgan de medias de malla
+          que funcionan como redes. La obra propone así una asociación
+          entre ambos elementos y plantea una pregunta abierta:
+          ¿qué hace que una imagen, un objeto o una relación entre
+          objetos pueda resultar tentadora o provocadora?
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medio:</strong> Medias de malla y manzanas.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 04 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — RETRATO DEL DESPERTAR
+      </div>
+
+      <div class="work-number">04</div>
+
+      <h3>Retrato del despertar: una revolución sexual de la mujer</h3>
+
+      <div class="work-meta">
+        2025 · Instalación
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          La obra parte de la intervención de manuales y enciclopedias
+          de educación sexual producidos entre las décadas de 1970 y
+          1980, particularmente del volumen <em>El primer amor:
+          la desfloración</em>. Estos materiales, escritos principalmente
+          desde perspectivas médicas, psiquiátricas y masculinas,
+          permiten rastrear formas en que el discurso sobre la sexualidad
+          femenina ha sido construido, normalizado y regulado socialmente.
+        </p>
+
+        <br>
+
+        <p>
+          El término “desfloración” se convierte en un punto de partida
+          para cuestionar las ideas históricas alrededor de la virginidad,
+          el cuerpo femenino y los rituales asociados a la sexualidad,
+          la pureza, el honor y el matrimonio.
+        </p>
+
+        <br>
+
+        <p>
+          A partir de esta investigación, fragmentos del archivo son
+          trasladados mediante transfer sobre una sábana, desplazando
+          el discurso desde el ámbito documental hacia el espacio íntimo.
+          La sábana funciona como una superficie de memoria e inscripción,
+          evocando los rituales nupciales y las formas históricas de
+          vigilancia y regulación del cuerpo femenino.
+        </p>
+
+        <br>
+
+        <p>
+          La instalación incorpora testimonios sonoros de mujeres
+          recogidos mediante entrevistas, cuyas voces confrontan y
+          desbordan los discursos que históricamente han intentado
+          definir la experiencia sexual femenina.
+        </p>
+
+        <br>
+
+        <p>
+          La obra articula archivo, intervención y desplazamiento,
+          poniendo en tensión los discursos sociales, culturales y
+          políticos que han producido determinadas representaciones
+          de la sexualidad femenina frente a las experiencias vividas
+          por las propias mujeres.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medios:</strong> Intervención de archivo, transfer
+          sobre sábana y testimonios sonoros.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 05 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — VISTA PANORÁMICA
+      </div>
+
+      <div class="work-number">05</div>
+
+      <h3>Vista panorámica</h3>
+
+      <div class="work-meta">
+        2026 · Video instalación
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          La obra propone una reflexión sobre el turismo sexual en
+          Medellín y la forma en que ciertos cuerpos femeninos han
+          sido incorporados al paisaje turístico contemporáneo de la
+          ciudad. A través de dos recorridos audiovisuales realizados
+          en zonas atravesadas por dinámicas de prostitución —Provenza
+          y Parque Lleras, en El Poblado, y los sectores de Veracruz
+          y El Raudal, en el centro—, la pieza evidencia cómo la mirada
+          extranjera consume el territorio desde una lógica de observación,
+          deseo y circulación.
+        </p>
+
+        <br>
+
+        <p>
+          Los videos fueron registrados mediante gafas con cámara
+          incorporada, simulando la mirada y el recorrido visual de
+          un turista. El movimiento de la cabeza, la dirección de la
+          observación y la forma de recorrer el espacio construyen una
+          mirada que se distancia del tránsito cotidiano y se aproxima
+          a una experiencia de contemplación y consumo visual del territorio.
+        </p>
+
+        <br>
+
+        <p>
+          De esta manera, el espectador no solo observa la obra, sino
+          que es situado dentro de una posición específica de mirada
+          vinculada al turismo y a la manera en que determinados cuerpos
+          y espacios son convertidos en experiencias exóticas.
+        </p>
+
+        <br>
+
+        <p>
+          Posteriormente, el material audiovisual es proyectado sobre
+          pantallas intervenidas que, a simple vista, aparecen como
+          superficies blancas. La imagen solo puede percibirse mediante
+          gafas con un filtro especial, convirtiendo la visión en una
+          experiencia condicionada y mediada por un dispositivo.
+        </p>
+
+        <br>
+
+        <p>
+          La pieza establece un contraste entre ambos sectores de la
+          ciudad. Mientras en El Poblado aparece una imagen hipersexualizada
+          y producida del cuerpo femenino, en el centro emergen cuerpos
+          atravesados por otras condiciones materiales y económicas.
+          Más que documentar la prostitución, la obra busca evidenciar
+          cómo estas dinámicas han sido incorporadas al paisaje urbano
+          y turístico de Medellín.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medios:</strong> Video, gafas con cámara incorporada,
+          pantallas intervenidas y gafas con filtro especial.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 06 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — ECONOMÍA DEL DESEO
+      </div>
+
+      <div class="work-number">06</div>
+
+      <h3>Economía del deseo</h3>
+
+      <div class="work-meta">
+        2026 · Instalación
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          La propuesta plantea una reflexión sobre la economía del
+          deseo y las formas en que el cuerpo femenino entra en
+          dinámicas contemporáneas de intercambio, circulación y
+          conversión monetaria dentro del contexto del turismo sexual
+          en Medellín. A partir de distintos dispositivos visuales,
+          gráficos y digitales, la obra explora cómo determinados
+          cuerpos son traducidos a valores económicos, integrándose
+          a lógicas de consumo global y sostenimiento material.
+        </p>
+
+        <br>
+
+        <p>
+          La instalación está compuesta por varios elementos. El
+          primero es un mapa de gran formato construido a partir de
+          lenguajes visuales y terminologías propias de la economía
+          y las finanzas. En él se establece una relación entre el
+          valor promedio de determinados servicios sexuales ofrecidos
+          en Medellín y su equivalencia en distintas monedas del mundo.
+        </p>
+
+        <br>
+
+        <p>
+          El segundo elemento consiste en una serie de intervenciones
+          sobre billetes de 20, 50 y 100 dólares, en los que se reemplazan
+          símbolos oficiales por imágenes, datos y lenguajes vinculados
+          al turismo sexual contemporáneo.
+        </p>
+
+        <br>
+
+        <p>
+          La propuesta incorpora además una plataforma digital interactiva
+          inspirada en páginas de conversión de moneda. En lugar de
+          convertir divisas tradicionales, el espectador encuentra
+          distintos servicios sexuales y su equivalencia en monedas de
+          múltiples países, confrontando directamente las relaciones
+          entre cuerpo, economía y circulación global.
+        </p>
+
+        <br>
+
+        <p>
+          Conceptualmente, la obra dialoga con las ideas de Karl Marx
+          en <em>El capital</em>, particularmente con la transformación
+          del cuerpo y la fuerza de trabajo en mercancía dentro de
+          sistemas económicos de intercambio. Asimismo, se relaciona
+          con los planteamientos de Michel Foucault sobre los mecanismos
+          de control y administración de los cuerpos.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medios:</strong> Mapa de gran formato, intervención
+          de billetes, plataforma digital interactiva y dispositivos gráficos.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- OBRA 07 -->
+
+    <article class="work">
+
+      <div class="work-image">
+        FOTO — TRANSPERMANECER
+      </div>
+
+      <div class="work-number">07</div>
+
+      <h3>Transpermanecer</h3>
+
+      <div class="work-meta">
+        2026 · Video instalación
+      </div>
+
+      <div class="work-detail">
+
+        <p>
+          La obra parte de una reflexión sobre la ciudad como un
+          territorio atravesado por relaciones de poder, donde el
+          espacio público, aunque se presenta como común y accesible,
+          no garantiza las mismas condiciones de permanencia para
+          todos los cuerpos.
+        </p>
+
+        <br>
+
+        <p>
+          A partir de las experiencias de mujeres trabajadoras sexuales,
+          quienes son obligadas a circular o desplazarse de determinados
+          lugares, la obra se pregunta quién puede detenerse, quién
+          puede permanecer y quién tiene el poder de determinar las
+          condiciones de esa permanencia.
+        </p>
+
+        <br>
+
+        <p>
+          La palabra <em>circular</em> adquiere así un sentido político:
+          no solo refiere al desplazamiento por la ciudad, sino también
+          a una condición impuesta sobre determinados cuerpos para
+          continuar ocupando un territorio.
+        </p>
+
+        <br>
+
+        <p>
+          En este sentido, el desplazamiento obligado no significa
+          necesariamente dejar de permanecer. El cuerpo se mueve
+          porque se le exige circular, pero ese movimiento no supone
+          una ruptura definitiva con el lugar que ocupa. La circulación
+          se convierte en un desplazamiento temporal: el cuerpo se
+          mueve para volver a permanecer.
+        </p>
+
+        <br>
+
+        <p>
+          La obra propone una reflexión sobre la vigilancia y las formas
+          en que los cuerpos son identificados, regulados y desplazados
+          dentro del espacio público. <em>Transpermanecer</em> plantea
+          así una ciudad donde permanecer también puede ser una forma
+          de resistencia, y donde moverse no necesariamente significa
+          dejar de ocupar un lugar.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Medio:</strong> Video.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section id="contacto" class="contact">
+
+  <div class="section-number">
+    04 — Contacto
+  </div>
+
+  <h2>
+    Hablemos<br>
+    de la obra.
+  </h2>
+
+  <a href="mailto:TU-CORREO-AQUI">
+    TU-CORREO-AQUI
+  </a>
+
+</section>
+
+
+<footer>
+
+  <span>MALEJA GALEANO</span>
+
+  <span>ARTISTA · MEDELLÍN · COLOMBIA</span>
+
+</footer>
+
+
+</body>
+</html>
