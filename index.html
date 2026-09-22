@@ -10,499 +10,458 @@
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #0a0a0a;
-    color: #eeeae4;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.65;
+body{
+    background:#0a0a0a;
+    color:#eeeae4;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.65;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+img{
+    display:block;
+    max-width:100%;
 }
 
-/* =========================
-   NAVEGACIÓN
-========================= */
+/* HEADER */
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 24px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,.12);
-    background: rgba(10,10,10,.94);
-    backdrop-filter: blur(12px);
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:24px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    background:rgba(10,10,10,.94);
+    backdrop-filter:blur(12px);
 }
 
-.logo {
-    font-size: 14px;
-    letter-spacing: 4px;
-    font-weight: bold;
-    white-space: nowrap;
+.logo{
+    font-size:14px;
+    letter-spacing:4px;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
-nav {
-    display: flex;
-    gap: 28px;
+nav{
+    display:flex;
+    gap:28px;
 }
 
-nav a {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #aaa;
+nav a{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#aaa;
+    transition:.3s;
 }
 
-nav a:hover {
-    color: #fff;
+nav a:hover{
+    color:#fff;
 }
 
-/* =========================
-   INICIO
-========================= */
+/* INICIO */
 
-.hero {
-    min-height: 100vh;
-    padding: 150px 7% 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid #292929;
+.hero{
+    min-height:100vh;
+    padding:150px 7% 100px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-bottom:1px solid #292929;
     background:
-        radial-gradient(
-            circle at 75% 35%,
-            #252525 0%,
-            #121212 22%,
-            #0a0a0a 55%
-        );
+    radial-gradient(
+        circle at 75% 35%,
+        #252525 0%,
+        #121212 22%,
+        #0a0a0a 55%
+    );
 }
 
-.eyebrow {
-    margin-bottom: 30px;
-    color: #777;
-    font-size: 10px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+.eyebrow{
+    margin-bottom:30px;
+    color:#777;
+    font-size:10px;
+    letter-spacing:5px;
+    text-transform:uppercase;
 }
 
-.hero h1 {
-    font-family: Georgia, serif;
-    font-weight: 400;
-    font-size: clamp(65px, 13vw, 170px);
-    line-height: .82;
-    letter-spacing: -7px;
+.hero h1{
+    font-family:Georgia,serif;
+    font-weight:400;
+    font-size:clamp(65px,13vw,170px);
+    line-height:.82;
+    letter-spacing:-7px;
 }
 
-.hero h1 span {
-    display: block;
-    font-style: italic;
+.hero h1 span{
+    display:block;
+    font-style:italic;
 }
 
-.hero-intro {
-    max-width: 650px;
-    margin-top: 55px;
-    color: #aaa6a0;
-    font-size: 18px;
+.hero-intro{
+    max-width:650px;
+    margin-top:55px;
+    color:#aaa6a0;
+    font-size:18px;
 }
 
-/* =========================
-   SECCIONES
-========================= */
+/* SECCIONES */
 
-section {
-    padding: 120px 7%;
-    border-bottom: 1px solid #292929;
+section{
+    padding:120px 7%;
+    border-bottom:1px solid #292929;
 }
 
-.section-label {
-    margin-bottom: 60px;
-    color: #666;
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+/* SOBRE MI */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:minmax(280px,330px) 1fr;
+    gap:75px;
+    align-items:start;
 }
 
-/* =========================
-   SOBRE MÍ
-========================= */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: minmax(280px, 330px) 1fr;
-    gap: 75px;
-    align-items: start;
+.about-photo{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    background:#181818;
 }
 
-.about-photo {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    background: #181818;
+.about-title{
+    margin-bottom:38px;
+    font-family:Georgia,serif;
+    font-size:clamp(38px,6vw,72px);
+    line-height:.95;
+    font-weight:400;
 }
 
-.about-title {
-    margin-bottom: 38px;
-    font-family: Georgia, serif;
-    font-size: clamp(38px, 6vw, 72px);
-    line-height: .95;
-    font-weight: 400;
+.about-text{
+    max-width:820px;
+    color:#aaa6a0;
+    font-size:17px;
 }
 
-.about-text {
-    max-width: 820px;
-    color: #aaa6a0;
-    font-size: 17px;
+.about-text p{
+    margin-bottom:24px;
 }
 
-.about-text p {
-    margin-bottom: 24px;
+/* STATEMENT */
+
+.statement{
+    max-width:1000px;
 }
 
-/* =========================
-   STATEMENT
-========================= */
-
-.statement {
-    max-width: 1000px;
+.statement-title{
+    margin-bottom:48px;
+    font-family:Georgia,serif;
+    font-size:clamp(40px,7vw,82px);
+    font-weight:400;
+    line-height:.95;
 }
 
-.statement-title {
-    margin-bottom: 48px;
-    font-family: Georgia, serif;
-    font-size: clamp(40px, 7vw, 82px);
-    font-weight: 400;
-    line-height: .95;
+.statement p{
+    margin-bottom:28px;
+    max-width:900px;
+    color:#aaa6a0;
+    font-size:18px;
 }
 
-.statement p {
-    margin-bottom: 28px;
-    max-width: 900px;
-    color: #aaa6a0;
-    font-size: 18px;
+/* OBRAS */
+
+.works{
+    display:flex;
+    flex-direction:column;
+    gap:160px;
 }
 
-/* =========================
-   OBRAS
-========================= */
-
-.works {
-    display: flex;
-    flex-direction: column;
-    gap: 160px;
+.work{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 320px;
+    gap:60px;
+    align-items:start;
 }
 
-.work {
-    display: grid;
-    grid-template-columns: minmax(0,1fr) 320px;
-    gap: 60px;
-    align-items: start;
+.work:nth-child(even){
+    grid-template-columns:320px minmax(0,1fr);
 }
 
-.work:nth-child(even) {
-    grid-template-columns: 320px minmax(0,1fr);
+.work:nth-child(even) .gallery{
+    order:2;
 }
 
-.work:nth-child(even) .gallery {
-    order: 2;
+.work:nth-child(even) .work-info{
+    order:1;
 }
 
-.work:nth-child(even) .work-info {
-    order: 1;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+    align-items:start;
 }
 
-/* =========================
-   GALERÍAS
-   Las imágenes mantienen
-   su proporción original.
-   NO se recortan.
-========================= */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    gap: 14px;
-    align-items: start;
+.gallery.single{
+    grid-template-columns:1fr;
 }
 
-.gallery.single {
-    grid-template-columns: 1fr;
+.gallery img{
+    width:100%;
+    height:auto;
+    max-width:100%;
+    object-fit:contain;
+    align-self:start;
+    background:#111;
 }
 
-.gallery img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-    background: #111;
+.work-info{
+    position:sticky;
+    top:110px;
 }
 
-/* =========================
-   INFORMACIÓN DE OBRA
-========================= */
-
-.work-info {
-    position: sticky;
-    top: 110px;
+.work-title{
+    margin-bottom:18px;
+    font-family:Georgia,serif;
+    font-size:38px;
+    font-weight:400;
+    line-height:1.05;
 }
 
-.work-title {
-    margin-bottom: 14px;
-    font-family: Georgia, serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.05;
+.work-meta{
+    margin-bottom:30px;
+    color:#777;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
-/* Línea gris que va debajo
-   del título de la obra */
+/* DESCRIPCIÓN */
 
-.work-meta {
-    margin-bottom: 30px;
-    color: #777;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.work-description{
+    color:#aaa6a0;
+    font-size:15px;
 }
 
-/* =========================
-   DESCRIPCIÓN
-========================= */
-
-.work-description {
-    color: #aaa6a0;
-    font-size: 15px;
+.work-description p{
+    margin-bottom:22px;
 }
 
-.work-description p {
-    margin-bottom: 22px;
+/* FICHA TÉCNICA */
+
+.work-ficha{
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid #333;
+    color:#777;
+    font-size:10px;
+    letter-spacing:2px;
+    line-height:1.8;
+    text-transform:uppercase;
 }
 
-/* =========================
-   FICHA TÉCNICA
-========================= */
-
-.work-ficha {
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid #333;
-    color: #777;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    line-height: 1.7;
+.work-ficha p{
+    margin-bottom:8px;
 }
 
-.work-ficha p {
-    margin-bottom: 9px;
+.work-ficha strong{
+    color:#aaa6a0;
+    font-weight:normal;
 }
 
-.work-ficha strong {
-    color: #999;
-    font-weight: normal;
+/* CONTACTO */
+
+.contact{
+    min-height:75vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-/* =========================
-   CONTACTO
-========================= */
-
-.contact {
-    min-height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.contact-title{
+    margin-bottom:45px;
+    font-family:Georgia,serif;
+    font-size:clamp(60px,10vw,120px);
+    font-weight:400;
+    line-height:.85;
 }
 
-.contact-title {
-    margin-bottom: 45px;
-    font-family: Georgia, serif;
-    font-size: clamp(60px, 10vw, 120px);
-    font-weight: 400;
-    line-height: .85;
+.contact-text{
+    max-width:570px;
+    margin-bottom:30px;
+    color:#aaa6a0;
 }
 
-.contact-text {
-    max-width: 570px;
-    margin-bottom: 30px;
-    color: #aaa6a0;
+.email{
+    display:inline-block;
+    width:max-content;
+    max-width:100%;
+    padding-bottom:8px;
+    border-bottom:1px solid #666;
+    font-family:Georgia,serif;
+    font-size:clamp(19px,3vw,31px);
+    word-break:break-word;
 }
 
-.email {
-    display: inline-block;
-    width: max-content;
-    max-width: 100%;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #666;
-    font-family: Georgia, serif;
-    font-size: clamp(19px, 3vw, 31px);
-    word-break: break-word;
+.phone{
+    margin-top:22px;
+    color:#aaa;
+    font-size:16px;
+    letter-spacing:2px;
 }
 
-.phone {
-    margin-top: 22px;
-    color: #aaa;
-    font-size: 16px;
-    letter-spacing: 2px;
+.instagram{
+    margin-top:16px;
+    color:#aaa;
+    font-size:16px;
+    letter-spacing:2px;
 }
 
-.instagram {
-    margin-top: 16px;
-    color: #aaa;
-    font-size: 16px;
-    letter-spacing: 2px;
+.instagram:hover,
+.phone:hover{
+    color:#fff;
 }
 
-.instagram:hover {
-    color: #fff;
+/* FOOTER */
+
+footer{
+    padding:30px 7%;
+    display:flex;
+    justify-content:space-between;
+    color:#555;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* CELULAR */
 
-footer {
-    padding: 30px 7%;
-    display: flex;
-    justify-content: space-between;
-    color: #555;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+@media(max-width:800px){
 
-/* =========================
-   MÓVIL
-========================= */
-
-@media(max-width:800px) {
-
-    header {
-        padding: 18px 5%;
+    header{
+        padding:18px 5%;
     }
 
-    .logo {
-        font-size: 11px;
-        letter-spacing: 3px;
+    .logo{
+        font-size:11px;
+        letter-spacing:3px;
     }
 
-    nav {
-        gap: 12px;
+    nav{
+        gap:12px;
     }
 
-    nav a {
-        font-size: 7px;
-        letter-spacing: 1px;
+    nav a{
+        font-size:7px;
+        letter-spacing:1px;
     }
 
-    .hero {
-        min-height: 100vh;
-        padding: 130px 6% 80px;
+    .hero{
+        min-height:100vh;
+        padding:130px 6% 80px;
     }
 
-    .hero h1 {
-        font-size: clamp(58px,18vw,100px);
-        letter-spacing: -5px;
+    .hero h1{
+        font-size:clamp(58px,18vw,100px);
+        letter-spacing:-5px;
     }
 
-    .hero-intro {
-        margin-top: 45px;
-        font-size: 16px;
+    .hero-intro{
+        margin-top:45px;
+        font-size:16px;
     }
 
-    section {
-        padding: 85px 6%;
+    section{
+        padding:85px 6%;
     }
 
-    .about-grid {
-        display: block;
+    .about-grid{
+        display:block;
     }
 
-    .about-photo {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        margin-bottom: 45px;
+    .about-photo{
+        width:100%;
+        max-width:500px;
+        height:auto;
+        margin-bottom:45px;
     }
 
-    .about-title {
-        font-size: 42px;
+    .about-title{
+        font-size:42px;
     }
 
-    .statement-title {
-        font-size: 43px;
+    .statement-title{
+        font-size:43px;
     }
 
-    .statement p {
-        font-size: 16px;
+    .statement p{
+        font-size:16px;
     }
 
-    .works {
-        gap: 100px;
+    .works{
+        gap:100px;
     }
 
     .work,
-    .work:nth-child(even) {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
+    .work:nth-child(even){
+        display:flex;
+        flex-direction:column;
+        gap:35px;
     }
 
-    .gallery {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        order: 1 !important;
+    .gallery{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        gap:18px;
+        order:1!important;
     }
 
-    .gallery img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
+    .gallery img{
+        width:100%;
+        height:auto;
+        max-width:100%;
+        object-fit:contain;
     }
 
-    .work-info {
-        position: static;
-        order: 2 !important;
+    .work-info{
+        position:static;
+        order:2!important;
     }
 
-    .work-title {
-        font-size: 32px;
+    .work-title{
+        font-size:32px;
     }
 
-    .work-description {
-        font-size: 15px;
+    .work-description{
+        font-size:15px;
     }
 
-    .contact-title {
-        font-size: 65px;
+    .contact-title{
+        font-size:65px;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 10px;
+    footer{
+        flex-direction:column;
+        gap:10px;
     }
 }
 
@@ -526,11 +485,10 @@ MALEJA GALEANO
 
 </header>
 
+
 <main>
 
-<!-- =========================
-     INICIO
-========================= -->
+<!-- INICIO -->
 
 <section class="hero" id="inicio">
 
@@ -550,24 +508,11 @@ Artista plástica
 </section>
 
 
-<!-- =========================
-     SOBRE MÍ
-========================= -->
+<!-- SOBRE MI -->
 
 <section id="sobre-mi">
 
-<div class="section-label">
-Sobre mí
-</div>
-
 <div class="about-grid">
-
-<!--
-IMPORTANTE:
-Este es el único nombre de archivo
-que puede necesitar cambio cuando
-me confirmes el nombre de la nueva foto.
--->
 
 <img
 class="about-photo"
@@ -584,7 +529,7 @@ Artista plástica
 <div class="about-text">
 
 <p>
-artista multidisciplinaria y estudiante de Artes Plásticas en la Universidad de Antioquia. Nacida en Medellín, desarrolla una práctica principalmente instalativa y de exploración conceptual, en la que investigación y creación se articulan a través de distintos lenguajes y medios como el video, la pintura y el dibujo. A través de estas prácticas construye obras que exploran las relaciones entre cuerpo, mirada, deseo, memoria y las estructuras de poder que atraviesan la experiencia cotidiana.
+Artista multidisciplinaria y estudiante de Artes Plásticas en la Universidad de Antioquia. Nacida en Medellín, desarrolla una práctica principalmente instalativa y de exploración conceptual, en la que investigación y creación se articulan a través de distintos lenguajes y medios como el video, la pintura y el dibujo. A través de estas prácticas construye obras que exploran las relaciones entre cuerpo, mirada, deseo, memoria y las estructuras de poder que atraviesan la experiencia cotidiana.
 </p>
 
 </div>
@@ -596,15 +541,9 @@ artista multidisciplinaria y estudiante de Artes Plásticas en la Universidad de
 </section>
 
 
-<!-- =========================
-     STATEMENT
-========================= -->
+<!-- STATEMENT -->
 
 <section id="statement">
-
-<div class="section-label">
-Statement
-</div>
 
 <div class="statement">
 
@@ -633,22 +572,14 @@ Desde el video, la instalación, la intervención de objetos y la experimentaci�
 </section>
 
 
-<!-- =========================
-     OBRAS
-========================= -->
+<!-- OBRAS -->
 
 <section id="obras">
-
-<div class="section-label">
-Obras
-</div>
 
 <div class="works">
 
 
-<!-- =====================================================
-     01 — TRANSPERMANECER
-===================================================== -->
+<!-- TRANSPERMANECER -->
 
 <article class="work">
 
@@ -669,7 +600,7 @@ TRANSPERMANECER
 </h3>
 
 <div class="work-meta">
-2026 · Videoinstalación
+2026 · VIDEO INSTALACIÓN
 </div>
 
 <div class="work-description">
@@ -698,10 +629,10 @@ La obra propone una reflexión sobre la vigilancia y las formas en que los cuerp
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> Transpermanecer</p>
-<p><strong>Año:</strong> 2026</p>
-<p><strong>Tipo:</strong> Videoinstalación</p>
-<p><strong>Medio:</strong> Video</p>
+<p>
+<strong>Medio:</strong>
+Video
+</p>
 
 </div>
 
@@ -710,9 +641,7 @@ La obra propone una reflexión sobre la vigilancia y las formas en que los cuerp
 </article>
 
 
-<!-- =====================================================
-     02 — ECONOMÍA DEL DESEO
-===================================================== -->
+<!-- ECONOMÍA DEL DESEO -->
 
 <article class="work">
 
@@ -781,7 +710,7 @@ ECONOMÍA DEL DESEO
 </h3>
 
 <div class="work-meta">
-2026 · Instalación
+2026 · INSTALACIÓN
 </div>
 
 <div class="work-description">
@@ -806,10 +735,10 @@ La propuesta incorpora además una plataforma digital interactiva inspirada en p
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> Economía del deseo</p>
-<p><strong>Año:</strong> 2026</p>
-<p><strong>Tipo:</strong> Instalación</p>
-<p><strong>Medios:</strong> Mapa de gran formato, intervención de billetes, plataforma digital interactiva y dispositivos gráficos.</p>
+<p>
+<strong>Medios:</strong>
+Mapa de gran formato, intervención de billetes, plataforma digital interactiva y dispositivos gráficos.
+</p>
 
 </div>
 
@@ -818,9 +747,7 @@ La propuesta incorpora además una plataforma digital interactiva inspirada en p
 </article>
 
 
-<!-- =====================================================
-     03 — PARADISE RENDER
-===================================================== -->
+<!-- PARADISE RENDER -->
 
 <article class="work">
 
@@ -834,7 +761,7 @@ loading="lazy"
 
 <img
 src="IMG_4471.HEIC"
-alt="Paradise Render: Medellín en alta definición — registro"
+alt="Paradise Render — registro"
 loading="lazy"
 >
 
@@ -847,7 +774,7 @@ PARADISE RENDER: MEDELLÍN EN ALTA DEFINICIÓN
 </h3>
 
 <div class="work-meta">
-2026 · Video instalación
+2026 · VIDEO INSTALACIÓN
 </div>
 
 <div class="work-description">
@@ -876,10 +803,10 @@ La pieza establece un contraste entre ambos sectores de la ciudad. Mientras en E
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> Paradise Render: Medellín en alta definición</p>
-<p><strong>Año:</strong> 2026</p>
-<p><strong>Tipo:</strong> Video instalación</p>
-<p><strong>Medios:</strong> Video, gafas con cámara incorporada, pantallas intervenidas y gafas con filtro especial.</p>
+<p>
+<strong>Medios:</strong>
+Video, gafas con cámara incorporada, pantallas intervenidas y gafas con filtro especial.
+</p>
 
 </div>
 
@@ -888,9 +815,7 @@ La pieza establece un contraste entre ambos sectores de la ciudad. Mientras en E
 </article>
 
 
-<!-- =====================================================
-     04 — RETRATO DE UNA REVOLUCIÓN
-===================================================== -->
+<!-- RETRATO DE UNA REVOLUCIÓN -->
 
 <article class="work">
 
@@ -898,7 +823,7 @@ La pieza establece un contraste entre ambos sectores de la ciudad. Mientras en E
 
 <img
 src="D621096D-8A04-47A9-AC80-502F3BE56F95.PNG"
-alt="Retrato de una revolución: el despertar sexual de la mujer"
+alt="Retrato de una revolución"
 loading="lazy"
 >
 
@@ -929,7 +854,7 @@ RETRATO DE UNA REVOLUCIÓN: EL DESPERTAR SEXUAL DE LA MUJER
 </h3>
 
 <div class="work-meta">
-2025 · Instalación
+2025 · INSTALACIÓN
 </div>
 
 <div class="work-description">
@@ -954,10 +879,10 @@ La obra articula así archivo, intervención y desplazamiento para poner en tens
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> Retrato de una revolución: el despertar sexual de la mujer</p>
-<p><strong>Año:</strong> 2025</p>
-<p><strong>Tipo:</strong> Instalación</p>
-<p><strong>Medios:</strong> Intervención de archivo, transfer sobre sábana y testimonios sonoros.</p>
+<p>
+<strong>Medios:</strong>
+Intervención de archivo, transfer sobre sábana y testimonios sonoros.
+</p>
 
 </div>
 
@@ -966,16 +891,14 @@ La obra articula así archivo, intervención y desplazamiento para poner en tens
 </article>
 
 
-<!-- =====================================================
-     05 — A MEDIAS
-===================================================== -->
+<!-- A MEDIAS -->
 
 <article class="work">
 
 <div class="gallery single">
 
 <img
-src="5AC10DDA-8827-43EE-9ABF-AC5FB91611E8.PNG"
+src="FA574899-C1E5-44A7-9DAF-F3B903DB09ED.PNG"
 alt="A medias"
 loading="lazy"
 >
@@ -989,7 +912,7 @@ A MEDIAS
 </h3>
 
 <div class="work-meta">
-2020 · Instalación
+2020 · INSTALACIÓN
 </div>
 
 <div class="work-description">
@@ -1022,10 +945,10 @@ La respuesta no está contenida únicamente en los objetos, sino también en la 
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> A medias</p>
-<p><strong>Año:</strong> 2020</p>
-<p><strong>Tipo:</strong> Instalación</p>
-<p><strong>Medio:</strong> Medias de malla y manzanas</p>
+<p>
+<strong>Medio:</strong>
+Medias de malla y manzanas.
+</p>
 
 </div>
 
@@ -1034,9 +957,7 @@ La respuesta no está contenida únicamente en los objetos, sino también en la 
 </article>
 
 
-<!-- =====================================================
-     06 — REFLEJOS DE UN TOCADOR
-===================================================== -->
+<!-- REFLEJOS DE UN TOCADOR -->
 
 <article class="work">
 
@@ -1057,7 +978,7 @@ REFLEJOS DE UN TOCADOR
 </h3>
 
 <div class="work-meta">
-2019 · Serie
+2019 · SERIE
 </div>
 
 <div class="work-description">
@@ -1078,10 +999,10 @@ El espejo introduce además al espectador en la experiencia: la invitación es a
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> Reflejos de un tocador</p>
-<p><strong>Año:</strong> 2019</p>
-<p><strong>Tipo:</strong> Serie</p>
-<p><strong>Medio:</strong> Dibujo impreso en adhesivo transparente sobre espejo</p>
+<p>
+<strong>Medio:</strong>
+Dibujo impreso en adhesivo transparente sobre espejo.
+</p>
 
 </div>
 
@@ -1090,16 +1011,14 @@ El espejo introduce además al espectador en la experiencia: la invitación es a
 </article>
 
 
-<!-- =====================================================
-     07 — LA DELGADA LÍNEA DEL EROTISMO
-===================================================== -->
+<!-- LA DELGADA LÍNEA DEL EROTISMO -->
 
 <article class="work">
 
 <div class="gallery single">
 
 <img
-src="FA574899-C1E5-44A7-9DAF-F3B903DB09ED.PNG"
+src="5AC10DDA-8827-43EE-9ABF-AC5FB91611E8.PNG"
 alt="La delgada línea del erotismo"
 loading="lazy"
 >
@@ -1113,7 +1032,7 @@ LA DELGADA LÍNEA DEL EROTISMO
 </h3>
 
 <div class="work-meta">
-2019 · Instalación
+2019 · INSTALACIÓN
 </div>
 
 <div class="work-description">
@@ -1138,11 +1057,15 @@ La obra pone así en tensión lo que se oculta y lo que se muestra, el deseo y e
 
 <div class="work-ficha">
 
-<p><strong>Título:</strong> La delgada línea del erotismo</p>
-<p><strong>Año:</strong> 2019</p>
-<p><strong>Medio:</strong> Instalación</p>
-<p><strong>Participantes:</strong> 5 mujeres, incluida la artista</p>
-<p><strong>Elementos:</strong> prendas de ropa interior usadas y fotografías</p>
+<p>
+<strong>Participantes:</strong>
+5 mujeres, incluida la artista.
+</p>
+
+<p>
+<strong>Elementos:</strong>
+Prendas de ropa interior usadas y fotografías.
+</p>
 
 </div>
 
@@ -1156,15 +1079,9 @@ La obra pone así en tensión lo que se oculta y lo que se muestra, el deseo y e
 </section>
 
 
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- CONTACTO -->
 
 <section id="contacto" class="contact">
-
-<div class="section-label">
-Contacto
-</div>
 
 <h2 class="contact-title">
 Hablemos.
@@ -1201,13 +1118,9 @@ Instagram · @maleja.galeano
 
 <footer>
 
-<span>
-© Maleja Galeano
-</span>
+<span>© Maleja Galeano</span>
 
-<span>
-Medellín · Colombia
-</span>
+<span>Medellín · Colombia</span>
 
 </footer>
 
